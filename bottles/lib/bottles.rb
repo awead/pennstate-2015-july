@@ -36,7 +36,7 @@ class Bottles
   end
 
   def verses(high, low)
-    verse(high) + "\n" + verse(low)
+    high.downto(low).map { |n| verse(n) }.join("\n")
   end
 
 end
